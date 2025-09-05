@@ -6,17 +6,40 @@
   <title>Low Taper Fade Haircut – Styles, Guide & Maintenance</title>
   <meta name="description" content="Learn all about the low taper fade haircut: styles, guide, and maintenance tips. Popular across the USA, UK, Canada, and South Asia.">
 
-  <!-- CSS Styling -->
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
       background: #fafafa;
       color: #333;
-      margin: 0;
-      padding: 20px;
-      position: relative; /* For overlay positioning */
     }
+
+    /* Hero / Image Section */
+    .hero-image {
+      width: 100%;
+      height: 400px; /* Adjust height as needed */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: #000; /* fallback color */
+    }
+
+    .hero-image img {
+      width: auto;
+      height: 100%;
+    }
+
+    /* Content Section */
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
     h1, h2, h3 {
       color: #222;
     }
@@ -40,7 +63,6 @@
     a:hover {
       color: #ff6600;
     }
-    /* Highlight box for conclusion */
     .conclusion {
       background: #f5f5f5;
       padding: 15px;
@@ -48,7 +70,8 @@
       border-radius: 8px;
       margin-top: 20px;
     }
-    /* Smooth fade animation */
+
+    /* Fade-in animation */
     .fade-in {
       opacity: 0;
       transform: translateY(10px);
@@ -58,33 +81,17 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* Overlay Image Styling */
-    .overlay-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 1; /* Content will be above image */
-      opacity: 0.3; /* Adjust transparency */
-      pointer-events: none; /* So that clicks go to content */
-    }
-
-    /* Content above overlay */
-    .content-wrapper {
-      position: relative;
-      z-index: 2;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Overlay Image -->
-  <img src="e4b99149-84db-434a-b739-229980ae09ac (1).webp" class="overlay-img" alt="Overlay Image">
+  <!-- Hero Image -->
+  <div class="hero-image">
+    <img src="e4b99149-84db-434a-b739-229980ae09ac (1).webp" alt="Low Taper Fade">
+  </div>
 
-  <div class="content-wrapper">
+  <!-- Content -->
+  <div class="content">
     <h1 class="fade-in">Low Taper Fade Haircut – Styles, Guide, and Maintenance</h1>
 
     <p class="fade-in">A <a href="https://ltfade.com" target="_blank" rel="dofollow">low taper fade</a> is one of the most stylish and versatile men’s hairstyles today. It provides a neat, professional appearance while keeping the modern edge intact. According to <a href="https://ltfade.com" target="_blank" rel="dofollow">LTFade</a>, this haircut has grown in popularity across the USA, UK, Canada, and South Asia because of its adaptability to different hair textures and face shapes.</p>
@@ -150,7 +157,7 @@
       elements.forEach((el, i) => {
         setTimeout(() => {
           el.classList.add('show');
-        }, i * 200); // delay for smooth sequence
+        }, i * 200); // staggered animation
       });
     });
   </script>
